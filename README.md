@@ -51,7 +51,7 @@ Usage of ./aoc:
   -day int
         Selected day. Must be between 1 and 25 (default 1)
   -part int
-        Selected part. Must be between 1 and 25 (default 1)
+        Selected part. Must be either 1 or 2 (default 1)                                                                                                                                    │
   -year int
         Selected year. Must be between 2015 and 2023 (default 2023)
 ```

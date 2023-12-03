@@ -27,7 +27,7 @@ func Run() (string, error) {
 func parseArguments() (*int, *int, *int) {
 	year := flag.Int("year", MaxYear, fmt.Sprintf("Selected year. Must be between %v and %v", MinYear, MaxYear))
 	day := flag.Int("day", MinDay, fmt.Sprintf("Selected day. Must be between %v and %v", MinDay, MaxDay))
-	part := flag.Int("part", FirstPart, fmt.Sprintf("Selected part. Must be between %v and %v", MinDay, MaxDay))
+	part := flag.Int("part", FirstPart, fmt.Sprintf("Selected part. Must be either %v or %v", FirstPart, SecondPart))
 	flag.Parse()
 	return year, day, part
 }
@@ -40,7 +40,7 @@ func validateArguments(year, day, part int) error {
 		return errors.New(fmt.Sprintf("Day must be between %v and %v", MinDay, MaxDay))
 	}
 	if part != FirstPart && part != SecondPart {
-		return errors.New(fmt.Sprintf("Part must be between %v and %v", FirstPart, SecondPart))
+		return errors.New(fmt.Sprintf("Part must be either %v or %v", FirstPart, SecondPart))
 	}
 	return nil
 }
