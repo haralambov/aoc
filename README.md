@@ -2,6 +2,9 @@
 
 My solutions to the Advent of Code puzzles, written in Go
 
+<sub><em>Disclaimer: I am not a professional Go developer.  
+The goal of solving AoC problems is to gain knowledge in that language.</em></sub>
+
 ## Progress
 
 | Day\Year | 2023 |
