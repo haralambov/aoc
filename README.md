@@ -12,7 +12,7 @@ The goal of solving AoC problems is to gain knowledge in that language.</em></su
 |     1    |  ⭐  |      |      |      |      |      |      |      |  ⭐  |
 |     2    |  ⭐  |      |      |      |      |      |      |      |  ⭐  |
 |     3    |  ⭐  |      |      |      |      |      |      |      |      |
-|     4    |      |      |      |      |      |      |      |      |      |
+|     4    |  🚧  |      |      |      |      |      |      |      |      |
 |     5    |      |      |      |      |      |      |      |      |      |
 |     6    |      |      |      |      |      |      |      |      |      |
 |     7    |      |      |      |      |      |      |      |      |      |
