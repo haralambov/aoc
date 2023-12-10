@@ -17,7 +17,7 @@ The goal of solving AoC problems is to gain knowledge in that language.</em></su
 |     6    |  ⭐  |      |      |      |      |      |      |      |      |
 |     7    |  ⭐  |      |      |      |      |      |      |      |      |
 |     8    |  ⭐  |      |      |      |      |      |      |      |      |
-|     9    |      |      |      |      |      |      |      |      |      |
+|     9    |  ⭐  |      |      |      |      |      |      |      |      |
 |    10    |      |      |      |      |      |      |      |      |      |
 |    11    |      |      |      |      |      |      |      |      |      |
 |    12    |      |      |      |      |      |      |      |      |      |
@@ -51,7 +51,7 @@ Usage of ./aoc:
   -day int
         Selected day. Must be between 1 and 25 (default 1)
   -part int
-        Selected part. Must be either 1 or 2 (default 1)                                                                                                                                    │
+        Selected part. Must be either 1 or 2 (default 1)
   -year int
         Selected year. Must be between 2015 and 2023 (default 2023)
 ```
