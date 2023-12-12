@@ -7,6 +7,7 @@ import (
 	d02y15 "github.com/haralambov/aoc/solutions/2015/day02"
 	d03y15 "github.com/haralambov/aoc/solutions/2015/day03"
 	d04y15 "github.com/haralambov/aoc/solutions/2015/day04"
+	d05y15 "github.com/haralambov/aoc/solutions/2015/day05"
 
 	d01y23 "github.com/haralambov/aoc/solutions/2023/day01"
 	d02y23 "github.com/haralambov/aoc/solutions/2023/day02"
@@ -98,6 +99,11 @@ func runDay2015(day, part int) string {
 			return d04y15.FirstPart()
 		}
 		return d04y15.SecondPart()
+	case 5:
+		if part == FirstPart {
+			return d05y15.FirstPart()
+		}
+		return d05y15.SecondPart()
 	default:
 		return fmt.Sprintf("Day %v is not implemented yet", day)
 	}
