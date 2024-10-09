@@ -11,8 +11,6 @@ func main() {
 	result, err := runner.Run()
 	if err != nil {
 		log.Fatal(err)
-		fmt.Println(err)
-		return
 	}
 	fmt.Println(result)
 }
