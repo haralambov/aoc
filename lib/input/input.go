@@ -14,7 +14,7 @@ func GetInputAsString(year, day int) string {
 	}
 	filePath, _ := filepath.Abs(fmt.Sprintf("solutions/%v/day%02v/input", year, day))
 	b, _ := os.ReadFile(filePath)
-	return string(b)
+	return strings.TrimSpace(string(b))
 }
 
 func GetInputAsSlice(year, day int) []string {

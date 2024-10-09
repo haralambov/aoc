@@ -20,9 +20,6 @@ func calcWrappingPaper(presentRibbotCalc calcPresentRibbon, additionalRibbonClac
 	inputLines := input.GetInputAsSlice(2015, 2)
 	totalWrappingPaper := 0
 	for _, inputLine := range inputLines {
-		if trimmedLine := strings.TrimSpace(inputLine); len(trimmedLine) == 0 {
-			continue
-		}
 		dimentionStrings := strings.Split(inputLine, "x")
 		l := parseDimension(dimentionStrings[0])
 		w := parseDimension(dimentionStrings[1])

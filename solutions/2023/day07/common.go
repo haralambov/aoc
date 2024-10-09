@@ -32,20 +32,18 @@ func solve(isPartTwo bool) string {
 	highCardPowersReversed := make(map[int]string, len(inputLines))
 
 	for _, inputLine := range inputLines {
-		if trimmedLine := strings.TrimSpace(inputLine); len(trimmedLine) > 0 {
-			trimmedLineParts := strings.Split(trimmedLine, " ")
-			hand := trimmedLineParts[0]
-			bet, _ := strconv.Atoi(trimmedLineParts[1])
-			inputData[hand] = bet
+		inputLineParts := strings.Split(inputLine, " ")
+		hand := inputLineParts[0]
+		bet, _ := strconv.Atoi(inputLineParts[1])
+		inputData[hand] = bet
 
-			handPower := calcHandPower(hand, isPartTwo)
-			handPowers[handPower] = append(handPowers[handPower], hand)
+		handPower := calcHandPower(hand, isPartTwo)
+		handPowers[handPower] = append(handPowers[handPower], hand)
 
-			highCardPower := calcHighCardPower(hand, isPartTwo)
-			highCardPowerConverted, _ := strconv.ParseInt(highCardPower, 16, 32)
-			highCardPowers[hand] = int(highCardPowerConverted)
-			highCardPowersReversed[int(highCardPowerConverted)] = hand
-		}
+		highCardPower := calcHighCardPower(hand, isPartTwo)
+		highCardPowerConverted, _ := strconv.ParseInt(highCardPower, 16, 32)
+		highCardPowers[hand] = int(highCardPowerConverted)
+		highCardPowersReversed[int(highCardPowerConverted)] = hand
 	}
 
 	orderedHands := make([]string, 0)

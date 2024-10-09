@@ -22,14 +22,10 @@ func FirstPart() string {
 	}
 
 	instructions := input.GetInputAsSlice(2015, 6)
-	for _, insinstruction := range instructions {
-		trimmedLine := strings.TrimSpace(insinstruction)
-		if len(trimmedLine) == 0 {
-			continue
-		}
-		command := getCommand(trimmedLine)
-		trimmedLine = strings.TrimSpace(strings.Replace(trimmedLine, command, "", 1))
-		instructionsParts := strings.Split(trimmedLine, " ") // [461,550 through 564,900]
+	for _, instruction := range instructions {
+		command := getCommand(instruction)
+		instruction = strings.TrimSpace(strings.Replace(instruction, command, "", 1))
+		instructionsParts := strings.Split(instruction, " ") // [461,550 through 564,900]
 
 		startCoordignates := strings.Split(instructionsParts[0], ",")
 		endCoordinates := strings.Split(instructionsParts[2], ",")

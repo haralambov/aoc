@@ -20,19 +20,14 @@ func FirstPart() string {
 	}
 outer:
 	for _, inputLine := range inputLines {
-		trimmedLine := strings.TrimSpace(inputLine)
-		if len(trimmedLine) == 0 {
-			continue
-		}
-
 		for _, forbiddenString := range forbiddenStrings {
-			if strings.Contains(trimmedLine, forbiddenString) {
+			if strings.Contains(inputLine, forbiddenString) {
 				continue outer
 			}
 		}
 
 		vowelsCount := 0
-		for _, char := range trimmedLine {
+		for _, char := range inputLine {
 			if _, ok := vowels[char]; ok {
 				vowelsCount++
 			}
@@ -41,13 +36,13 @@ outer:
 			continue
 		}
 
-		currentChar := trimmedLine[0]
-		for i := 1; i < len(trimmedLine); i++ {
-			if currentChar == trimmedLine[i] {
+		currentChar := inputLine[0]
+		for i := 1; i < len(inputLine); i++ {
+			if currentChar == inputLine[i] {
 				totalNiceStrings++
 				continue outer
 			} else {
-				currentChar = trimmedLine[i]
+				currentChar = inputLine[i]
 			}
 		}
 	}

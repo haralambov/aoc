@@ -11,10 +11,6 @@ func SecondPart() string {
 	inputLines := input.GetInputAsSlice(2023, 2)
 	sum := 0
 	for _, line := range inputLines {
-		if trimmedLine := strings.TrimSpace(line); len(trimmedLine) == 0 {
-			continue
-		}
-
 		lineParts := strings.Split(line, ":")
 		_, gamesPart := lineParts[0], lineParts[1]
 		gameRounds := GetGameRounds(gamesPart)

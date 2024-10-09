@@ -97,9 +97,6 @@ func calculateAllSignals() {
 }
 
 func loadInputLine(inputLine string) {
-	if len(inputLine) == 0 {
-		return
-	}
 	lineParts := strings.Split(inputLine, " -> ")
 	signal, wireKey := lineParts[0], lineParts[1]
 	wires[wireKey] = newWire(signal)

@@ -12,15 +12,10 @@ func SecondPart() string {
 	totalNiceStrings := 0
 outer:
 	for _, inputLine := range inputLines {
-		trimmedLine := strings.TrimSpace(inputLine)
-		if len(trimmedLine) == 0 {
-			continue
-		}
-
 		containsPair := false
-		for i := 1; i < len(trimmedLine); i++ {
-			pair := string(trimmedLine[i-1]) + string(trimmedLine[i])
-			stringToCheck := trimmedLine[i+1:]
+		for i := 1; i < len(inputLine); i++ {
+			pair := string(inputLine[i-1]) + string(inputLine[i])
+			stringToCheck := inputLine[i+1:]
 			if strings.Contains(stringToCheck, pair) {
 				containsPair = true
 				break
@@ -31,13 +26,13 @@ outer:
 			continue
 		}
 
-		currentChar := trimmedLine[0]
-		for i := 2; i < len(trimmedLine); i++ {
-			if currentChar == trimmedLine[i] && currentChar == trimmedLine[i-2] {
+		currentChar := inputLine[0]
+		for i := 2; i < len(inputLine); i++ {
+			if currentChar == inputLine[i] && currentChar == inputLine[i-2] {
 				totalNiceStrings++
 				continue outer
 			} else {
-				currentChar = trimmedLine[i-1]
+				currentChar = inputLine[i-1]
 			}
 		}
 	}

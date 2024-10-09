@@ -3,7 +3,6 @@ package day03
 import (
 	"regexp"
 	"strconv"
-	"strings"
 )
 
 var (
@@ -21,12 +20,10 @@ type schematicElement struct {
 
 func extractNumbersAndSymbols(inputLines []string, symbolsRe *regexp.Regexp) {
 	for rowIndex, line := range inputLines {
-		if trimmedLine := strings.TrimSpace(line); len(trimmedLine) > 0 {
-			numberMatches := numbersRe.FindAllStringIndex(trimmedLine, -1)
-			addNumbersToCollection(numberMatches, trimmedLine, rowIndex, true)
-			symbolMatches := symbolsRe.FindAllStringIndex(trimmedLine, -1)
-			addSymbolsToCollection(symbolMatches, rowIndex)
-		}
+		numberMatches := numbersRe.FindAllStringIndex(line, -1)
+		addNumbersToCollection(numberMatches, line, rowIndex, true)
+		symbolMatches := symbolsRe.FindAllStringIndex(line, -1)
+		addSymbolsToCollection(symbolMatches, rowIndex)
 	}
 }
 
