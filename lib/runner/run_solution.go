@@ -20,16 +20,32 @@ import (
 	d07y23 "github.com/haralambov/aoc/solutions/2023/day07"
 	d08y23 "github.com/haralambov/aoc/solutions/2023/day08"
 	d09y23 "github.com/haralambov/aoc/solutions/2023/day09"
+
+	d01y24 "github.com/haralambov/aoc/solutions/2024/day01"
 )
 
 func RunPart(year, day, part int) string {
 	switch year {
+	case 2024:
+		return runDay2024(day, part)
 	case 2023:
 		return runDay2023(day, part)
 	case 2015:
 		return runDay2015(day, part)
 	default:
 		return fmt.Sprintf("Year %v is not implemented yet", year)
+	}
+}
+
+func runDay2024(day, part int) string {
+	switch day {
+	case 1:
+		if part == FirstPart {
+			return d01y24.FirstPart()
+		}
+		return d01y24.SecondPart()
+	default:
+		return fmt.Sprintf("Day %v is not implemented yet", day)
 	}
 }
 

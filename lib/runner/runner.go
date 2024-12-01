@@ -8,7 +8,7 @@ import (
 
 const (
 	MinYear    = 2015
-	MaxYear    = 2023
+	MaxYear    = 2024
 	MinDay     = 1
 	MaxDay     = 25
 	FirstPart  = 1
